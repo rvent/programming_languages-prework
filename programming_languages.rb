@@ -36,6 +36,11 @@ def reformat_languages(languages)
   language_type = languages.keys
   language_values = languages.values
   language_name = language_values.map {|value| value.keys}
+  language_name.each do |name|
+    language_values.each do |value|
+      new_hash[name] = value[name]
+    end
+  end
 end
 
 puts reformat_languages(languages)
