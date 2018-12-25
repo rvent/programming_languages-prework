@@ -61,10 +61,10 @@ def reformat_languages(languages)
       if v[name] != nil
         new_hash[name] = v[name]
       end
-      if hash_pairs[name] == nil
-        hash_pairs[name] = [k]
+      if new_hash[name][:style] == nil
+        new_hash[name][:style] = [k]
       else
-        hash_pairs[name] << k
+        new_hash[name][:style] << k
       end
       # puts new_hash[name][:style].to_a
       # if new_hash[name][:style] == nil
