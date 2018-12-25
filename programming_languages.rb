@@ -72,7 +72,7 @@ def reformat_languages(languages)
     end
   end
   #new_hash
-  pairs
+  hash_pairs
 end
 
 puts reformat_languages(languages)
