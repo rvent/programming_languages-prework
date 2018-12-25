@@ -69,4 +69,4 @@ def reformat_languages(languages)
   new_hash
 end
 
-puts reformat_languages
+puts reformat_languages(languages)
