@@ -36,14 +36,13 @@ def reformat_languages(languages)
   language_style = languages.keys
   language_values = languages.values
   language_name = language_values.map {|value| value.keys}
-  unique_language_name = language_name.flatten
-  unique_language_name.each do |name|
-    new_hash[name][:style] = []
+  language_name.flatten.uniq.each do |name|
     language_values.each do |value|
       if value[name] != nil
         new_hash[name] = value[name]
       end
     end
+    new_hash[name][:style] = []
     language_style.each do |key|
       if languages[key].include?(name)
         new_hash[name][:style] << key
