@@ -58,7 +58,7 @@ def reformat_languages(languages)
     language_name = v.keys
     language_name.each do |name|
       if value[name] != nil
-        new_hash[name] = val[name]
+        new_hash[name] = v[name]
       end
       new_hash[name][:style] = []
       if languages[k].include?(name)
