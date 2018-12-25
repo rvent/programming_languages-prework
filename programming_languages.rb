@@ -38,7 +38,9 @@ def reformat_languages(languages)
   language_name = language_values.map {|value| value.keys}
   language_name.flatten.each do |name|
     language_values.each do |value|
-      new_hash[name] = value[name]
+      if value[name] != nil
+        new_hash[name] = value[name]
+      end
     end
   end
   new_hash
