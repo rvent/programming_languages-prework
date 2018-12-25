@@ -30,18 +30,9 @@ def reformat_languages(languages)
         new_hash[name] = val[name]
       end
       new_hash[name][:style] = []
-  language_style = languages.keys
-  language_values = languages.values
-  language_name = language_values.map {|value| value.keys}
-  language_name.flatten.uniq.each do |name|
-    language_values.each do |value|
-      if value[name] != nil
-        new_hash[name] = value[name]
+      if languages[key].include?(name)
+        new_hash[name][:style] << key
       end
-    end
-    new_hash[name][:style] = []
-    if languages[key].include?(name)
-      new_hash[name][:style] << key
     end
   end
   new_hash
