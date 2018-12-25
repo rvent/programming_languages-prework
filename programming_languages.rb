@@ -61,6 +61,7 @@ def reformat_languages(languages)
         new_hash[name] = v[name]
       end
       if languages[k].include?(name)
+        puts k, name, languages[k].include?(name)
         if new_hash[name][:style] == nil
           new_hash[name][:style] = [k]
         else
@@ -69,7 +70,7 @@ def reformat_languages(languages)
       end
     end
   end
-  new_hash
+  #new_hash
 end
 
 puts reformat_languages(languages)
