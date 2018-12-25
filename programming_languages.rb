@@ -60,13 +60,11 @@ def reformat_languages(languages)
       if v[name] != nil
         new_hash[name] = v[name]
       end
-      if languages[k].include?(name)
-        puts k, name, languages[k].include?(name)
-        if new_hash[name][:style] == nil
-          new_hash[name][:style] = [k]
-        else
-          new_hash[name][:style] << k
-        end
+      puts k, name
+      if new_hash[name][:style] == nil
+        new_hash[name][:style] = [k]
+      else
+        new_hash[name][:style] << k
       end
     end
   end
