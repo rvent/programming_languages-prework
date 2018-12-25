@@ -30,7 +30,7 @@ def reformat_languages(languages)
         new_hash[name] = val[name]
       end
       new_hash[name][:style] = []
-      if languages[key].include?(name)
+      if languages[k].include?(name)
         new_hash[name][:style] << k
       end
     end
