@@ -55,7 +55,7 @@ def reformat_languages(languages)
   # your code here
   new_hash = {}
   languages.each do |k, v|
-    language_name = v.map {|val| val.keys}
+    language_name = v.keys
     language_name.each do |name|
       if v[name] != nil
         new_hash[name] = v[name]
