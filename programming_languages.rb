@@ -33,7 +33,8 @@ languages = {
 def reformat_languages(languages)
   # your code here
   new_hash = {}
-  languge_type = languages.keys
+  language_type = languages.keys
+  language_values = languages.values
 end
 
 puts reformat_languages(languages)
