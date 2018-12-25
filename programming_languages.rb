@@ -53,6 +53,7 @@ languages = {
 
 def reformat_languages(languages)
   # your code here
+  pairs = []
   new_hash = {}
   languages.each do |k, v|
     language_name = v.keys
@@ -60,16 +61,18 @@ def reformat_languages(languages)
       if v[name] != nil
         new_hash[name] = v[name]
       end
-      puts new_hash[name][:style].to_a
-      if new_hash[name][:style] == nil
-        new_hash[name][:style] = [k]
-      else
-        new_hash[name][:style] << k
-      end
-      puts name, new_hash[name][:style].to_a
+      pairs = [name, k]
+      # puts new_hash[name][:style].to_a
+      # if new_hash[name][:style] == nil
+      #   new_hash[name][:style] = [k]
+      # else
+      #   new_hash[name][:style] << k
+      # end
+      # puts name, new_hash[name][:style].to_a
     end
   end
   #new_hash
+  pairs
 end
 
 puts reformat_languages(languages)
