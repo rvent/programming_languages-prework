@@ -75,8 +75,7 @@ def reformat_languages(languages)
       # puts name, new_hash[name][:style].to_a
     end
   end
-  #new_hash
-  hash_pairs
+  new_hash
 end
 
 puts reformat_languages(languages)
