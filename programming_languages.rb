@@ -41,6 +41,7 @@ def reformat_languages(languages)
       new_hash[name] = value[name]
     end
   end
+  new_hash
 end
 
 puts reformat_languages(languages)
